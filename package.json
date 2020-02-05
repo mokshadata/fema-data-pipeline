@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "mkdir data && mkdir artifacts && mkdir outputs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "rm outputs/merged-data.json",
+    "prepack": "rm outputs/merged-data.geojson",
     "pack": "node 02-pack-geojson.js",
     "postpack": "./03-wrap-geojson.sh"
   },
