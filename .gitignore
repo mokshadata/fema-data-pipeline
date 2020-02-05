@@ -1,1 +1,6 @@
 data/*.geojson
+bad-data/*.geojson
+test-data/*.geojson
+artifacts/*
+outputs/*
+node_modules/*

@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
 
+# TODO would be nice to parameterize this some more, but leaving as is for now.
+
 grid_size=10000
 x_min=-10730000
 x_max=-10490000
 y_min=3360000
 y_max=3600000
+
+# x_min=-10735000 #-10735650
+# x_max=-10585000 #-10582914.33
+# y_min=3300000 #3304875
+# y_max=3460000 #3453119.14
 
 for x_step_min in $(eval echo {$x_min..$x_max..$grid_size}); do
   for y_step_min in $(eval echo {$y_min..$y_max..$grid_size}); do
