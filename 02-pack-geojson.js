@@ -13,7 +13,7 @@ const readStream = fs.createReadStream('./artifacts/01-unique-files.txt')
 readStream.setEncoding('UTF8')
 
 // Output write stream for resulting merged data file.
-const outputStream = fs.createWriteStream('./outputs/merged-data.json')
+const outputStream = fs.createWriteStream('./outputs/merged-data.geojson')
 
 // Set up a JSON stringify stream to process stream out to file and
 // stringify it as JSON before writing.
