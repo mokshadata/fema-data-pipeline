@@ -54,7 +54,7 @@ readStream.on('data', (data) => {
           )(collectedShapesIDs)
         ) {
 
-          GJV.isPolygon(feature.geometry, (isValid, err) => {
+          GJV.valid(feature.geometry, (isValid, err) => {
             if (!isValid) {
               corruptShapeIds.push(feature.id)
               console.warn(err)
