@@ -8,6 +8,6 @@ Currently built to test locally, will be converting for cloud (i.e. multiple pro
 
 Some of the shapes mapped:
 
-![Current progress](./snapshots/00-in-progress-shapes-mapped.png).
+![Current progress](./snapshots/04-shapes-mapped.jpg).
 
 The above shows that we should be able to get more comprehensive data from the map server to complete our current data set.
