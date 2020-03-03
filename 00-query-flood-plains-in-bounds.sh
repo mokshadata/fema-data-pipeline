@@ -7,10 +7,14 @@ do_if_no_file() {
 
   if [ -f "$filename" ]; then
     echo "$filename exists, skipping."
-  else 
-    echo "$filename does not exist, do stuff."
-    echo $@
-    "$@"
+  else
+    if [ -f "./artifacts/01-current-files.txt" ] && grep -q "${filename}" ./artifacts/01-current-files.txt; then
+      echo "$filename processed, skipping"
+    else
+      echo "$filename not yet processed, do stuff."
+      echo $@
+      "$@"
+    fi
   fi
 }
 

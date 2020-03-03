@@ -7,10 +7,10 @@ const GJV = require('geojson-validation')
 const oboe = require('oboe')
 const JSONStream = require('JSONStream')
 
-// Set up streams.
-// Input read stream from file of paths to unique geojson files.
-const readStream = fs.createReadStream('./artifacts/01-unique-files.txt')
-readStream.setEncoding('UTF8')
+// // Set up streams.
+// // Input read stream from file of paths to unique geojson files.
+// const readStream = fs.createReadStream('./artifacts/01-unique-files.txt')
+// readStream.setEncoding('UTF8')
 
 // Output write stream for resulting merged data file.
 const outputStream = fs.createWriteStream('./outputs/merged-data.geojson')
@@ -26,7 +26,7 @@ const transformPathToReadStream = (filepath, index) => (() => {
   return fs.createReadStream(filepath)
 })
 
-readStream.on('data', (data) => {
+fs.readFile('./artifacts/01-unique-files.txt', 'UTF8', (err, data) => {
 
   const geojsonReadStreams = R.pipe(
     R.split('\n'),
