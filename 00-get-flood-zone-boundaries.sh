@@ -21,9 +21,7 @@ iterate_over_bounds() {
   parallel \
     -a <(seq ${x_min} ${grid_size} $(($x_max - $grid_size))) \
     -a <(seq ${y_min} ${grid_size} $(($y_max - $grid_size))) \
-    -a <(seq $(($x_min + $grid_size)) ${grid_size} ${x_max}) \
-    -a <(seq $(($y_min + $grid_size)) ${grid_size} ${y_max}) \
-    -P 4 "$@" {1} {2} {3} {4} $grid_size
+    -P 4 "$@" {1} {2} $grid_size
 }
 
 query_flood_plains() {

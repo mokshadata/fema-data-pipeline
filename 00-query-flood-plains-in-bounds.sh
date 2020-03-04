@@ -40,5 +40,5 @@ query_flood_plains_in_bounds() {
 }
 
 if [ "${1}" != "--source-only" ]; then
-  query_flood_plains_in_bounds $1 $2 $3 $4 $5
+  query_flood_plains_in_bounds $1 $2 $((${1} + ${3})) $((${2} + ${3}))
 fi
